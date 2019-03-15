@@ -8,7 +8,8 @@
     <!-- use AADServicePrincipalSecret filed for testing only, set via New-StoredCredential -->
     <Variable Name="AADServicePrincipalSecret" Value=""/>    
     <!--Azure subscription name -->
-    <Variable Name="currentAzureSubscriptionName" Value="Microsoft Azure"/>
+    <!--<Variable Name="currentAzureSubscriptionName" Value="Microsoft Azure"/> -->
+	<Variable Name="currentAzureSubscriptionID" Value="Provide your AzureRm Subscription ID"/>
     <!-- WVD tenant name -->
     <Variable Name="tenantName" Value="RdsIsmTenant1"/>
 	<!-- WVD host pool name -->

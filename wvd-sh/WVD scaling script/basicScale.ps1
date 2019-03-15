@@ -139,7 +139,7 @@ if (!$isServicePrincipalBool) {
   # if standard account is provided login in Azure with that account 
 
   try {
-    $azureauthentication = Connect-AzureRmAccount -SubscriptionName $currentAzureSubscriptionName -Credential $Credential
+    $azureauthentication = Connect-AzureRmAccount -SubscriptionId $currentAzureSubscriptionID -Credential $Credential
 
   }
   catch {
@@ -196,8 +196,8 @@ Write-Log 1 "Running switching to the $tenantGroupName context" "Info"
 Set-RdsContext -TenantGroupName $tenantGroupName
 
 #select the current Azure Subscription specified in the config
-#Select-AzureRmSubscription -SubscriptionName $currentAzureSubscriptionName
-Set-AzureRmContext -SubscriptionName $currentAzureSubscriptionName
+#Select-AzureRmSubscription -SubscriptioID $currentAzureSubscriptionID
+Set-AzureRmContext -SubscriptionId $currentAzureSubscriptionID
 #Construct Begin time and End time for the Peak period
 $CurrentDateTime = Get-Date
 Write-Log 3 "Starting WVD Tenant Hosts Scale Optimization: Current Date Time is: $CurrentDateTime" "Info"
